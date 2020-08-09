@@ -1,0 +1,73 @@
+.intro {
+  .title {
+    max-width: 45rem;
+  }
+
+  &-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: $large-padding;
+
+    &_item {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &-grid-ativos {
+    display: grid;
+    grid-gap: $medium-padding;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background-color: $primary;
+    padding: $large-padding;
+
+    &_card {
+      background-color: white;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      padding: $small-padding;
+
+      .card-rendimentos {
+        font-size: $font-small;
+        font-weight: 500;
+        color: $primary;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 1px;
+          background-color: $gray;
+          width: 4rem;
+          margin: $ex-small-padding 0;
+        }
+      }
+
+      .card-btn {
+        @include btn();
+        display: flex;
+        justify-content: space-between;
+        
+        &_mais {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+
+          &::after {
+            content: '+';
+            display: inline-block;
+            font-size: $font-medium;
+            color: $primary;
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+  }
+}

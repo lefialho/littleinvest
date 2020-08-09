@@ -1,0 +1,18 @@
+mixin ativos(titulo, rendimentos, banco)
+  article.intro-grid-ativos_card
+    h1.subtitle #{titulo}
+    h2.card-rendimentos #{rendimentos}
+    span.text #{banco}
+    a.card-btn(class="btn-ex-big" href=link) Adicionar
+      span.card-btn_mais
+
+mixin vantagens(img, titulo, texto)
+  article.vantagens-item
+    img(src=urlImg + img, alt="")
+    h2.subtitle #{titulo}
+    p.text #{texto}
+
+mixin input(label, type, placeholder) 
+  .input-box
+    label #{label}
+    input(type=type placeholder=placeholder)

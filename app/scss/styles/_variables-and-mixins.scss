@@ -1,0 +1,37 @@
+// colors
+$primary: #4455DD;
+$hover-primary: #2f41ca;
+$gray: #DEDEDE;
+$dark-gray: #707070;
+$input: #DEDEDE;
+$light-gray: #F2F2F2;
+
+// padding
+$ex-small-padding: .8rem;
+$small-padding: 1.6rem;
+$medium-padding: 3.2rem;
+$large-padding: 6.4rem;
+$ex-large-padding: 12.8rem;
+
+// font-size
+$font-small: 1.6rem;
+$font-medium: 2.4rem;
+$font-large: 3.2rem;
+$font-title: 2.5vw;
+$font-title-mobile: $font-large;
+
+// mixins
+@mixin btn() {
+	display: inline-block;
+	background: $primary;
+	color: white;
+	font-weight: 500;
+	border-radius: .4rem;
+	font-size: $font-small;
+	font-weight: 500;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $hover-primary;
+	}
+}

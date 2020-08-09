@@ -1,0 +1,43 @@
+.header {
+  background-color: $light-gray;
+  font-size: $font-small;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $small-padding $large-padding;
+  box-shadow: 0 1px 8px rgba($color: #000000, $alpha: .2);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  nav {
+    font-weight: 500;
+
+    .navigation {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      grid-auto-columns: max-content;
+      grid-gap: 2rem;
+
+      &-item {
+        &:not(:last-child) {
+          a {
+            color: $dark-gray;
+
+            &:hover {
+              color: black;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-menu {
+      display: none;
+      border: none;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.footer {
+  .title {
+    color: white;
+    margin-bottom: $small-padding;
+  }
+
+  &-content {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: $medium-padding;
+    padding: $large-padding;
+
+    &_item {
+      .grid-redes-sociais {
+        display: flex;
+
+        a {
+          &:hover {
+            opacity: .9;
+          }
+
+          &:not(:last-child) {
+            margin-right: $small-padding;
+          }
+        }
+      }
+
+      .grid-mapa {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: max-content;
+        grid-gap: $ex-small-padding;
+        margin-inline-start: 3rem;
+
+        li:nth-child(2n) {
+          margin-left: $medium-padding;
+        }
+      }
+
+      li,
+      p {
+        color: $dark-gray;
+        font-size: $font-small;
+      }
+    }
+  }
+
+  &-copyright {
+    background: $primary;
+    color: white;
+    font-size: $font-small;
+    padding: $small-padding $large-padding;
+  }
+}

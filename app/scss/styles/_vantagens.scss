@@ -1,0 +1,34 @@
+.vantagens {
+  padding: $large-padding $ex-large-padding;
+
+  .title {
+    text-align: center;
+  }
+
+  &-grid {
+    display: grid;
+    grid-gap: $large-padding;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .subtitle {
+      margin: $small-padding 0;
+    }
+
+    .text {
+      max-width: 25rem;
+      text-align: center;
+    }
+  }
+
+  .btn-vantagens {
+    display: flex;
+    justify-content: center;
+    margin: $large-padding auto 0;
+  }
+}

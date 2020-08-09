@@ -1,0 +1,40 @@
+.frase {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 70rem;
+  padding: $large-padding;
+  background: url(../img/bg.jpg) no-repeat;
+  background-position: right;
+  background-size: cover;
+
+  &::before {
+    content: '“';
+    display: inline-block;
+    margin-left: -3rem;
+    color: $primary;
+    font-size: 40rem;
+    line-height: 0;
+    opacity: 0.4;
+  }
+
+  &-text {
+    p {
+      font-size: unquote("max(#{$font-title-mobile}, #{$font-large})");;
+      font-weight: 600;
+      max-width: 50rem;
+      font-style: italic;
+      color: white;
+      margin-bottom: $medium-padding;
+      line-height: 1.2;
+    }
+  }
+
+  &-cite {
+    font-size: $font-title;
+    font-size: $font-medium;
+    font-weight: 600;
+    display: inline-block;
+    color: $primary;
+  }
+}

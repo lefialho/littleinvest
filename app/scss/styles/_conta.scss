@@ -1,0 +1,33 @@
+.conta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &-item {
+    padding: $large-padding;
+    flex: 1;
+
+    &:first-child {
+      background-color: $light-gray;
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin-bottom: $small-padding;
+      }
+
+      figcaption {
+        font-size: $font-medium;
+        font-weight: 600;
+      }
+    }
+
+    .btn-big {
+      margin-top: $small-padding;
+    }
+  }
+}

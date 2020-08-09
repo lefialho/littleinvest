@@ -1,0 +1,19 @@
+header.header 
+  a.logo(href=urlIndex)
+    img(src=urlImg + 'logo.svg', alt="Logotipo")
+
+  nav
+    button.btn-menu(data-bind="btnMenu")
+      .btn-menu_hamburguer
+      
+    ul.navigation(data-bind="navigation")
+      - var menu = [{"name":"Investimentos", "link":`${urlPages}`}, {"name":"Serviços", "link":`${urlPages}`}, {"name":"Contato", "link":`${urlPages}`}, {"name":"Cadastre-se", "link":`${urlPages}`}];
+
+      each item in menu
+        li.navigation-item
+          if selected === item.name
+            a(class="selected" href=item.link) #{item.name}
+          if item.name === "Cadastre-se"
+            a(class="btn-small" href=item.link) #{item.name}
+          else
+            a(href=item.link) #{item.name}

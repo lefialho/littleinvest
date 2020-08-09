@@ -1,0 +1,185 @@
+@media (min-width: 900px) {
+  .intro {
+    &-grid {
+      &_item {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: $small-padding $medium-padding;
+
+    .logo {
+      order: 1;
+    }
+
+    nav {
+      .navigation {
+        display: grid;
+        grid-auto-flow: row;
+        position: absolute;
+        padding: $medium-padding;
+        top: 5.8rem;
+        width: 50%;
+        transition: all .2s;
+        left: -100%;
+
+        &-item {
+          &:last-child {
+            padding-bottom: 100vh;
+          }
+        }
+
+        &.active {
+          background-color: $primary;
+          left: 0;
+          box-shadow: 0px 76.8rem 0px 76.8rem rgba(0, 0, 0, .5);
+
+          .navigation-item {
+            a {
+              color: white;
+
+              &.btn-small {
+                color: $primary;
+                background: white;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .btn-menu {
+        display: flex;
+        border: none;
+        cursor: pointer;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        right: 0;
+        z-index: 2;
+
+        &.active {
+          .btn-menu_hamburguer {
+            transform: rotate(45deg);
+  
+            &::before {
+              transform: rotate(90deg);
+              top: 0;
+            }
+  
+            &::after {
+              transform: rotate(90deg);
+              bottom: 0;
+              height: 1px;
+            }
+          }
+        }
+
+        &_hamburguer {
+          display: flex;
+          align-items: center;
+          background: $dark-gray;
+          border: none;
+          border-radius: .1rem;
+          height: 2px;
+          width: 2rem;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &::before,
+          &::after {
+            content: '';
+            background: $dark-gray;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: .1rem;
+            transition: .2s ease-in-out;
+          }
+
+          &::before {
+            top: -6px;
+          }
+
+          &::after {
+            bottom: -6px;
+          }
+        }
+      }
+    }
+  }
+
+  .intro {
+    &-grid {
+      padding: $medium-padding;
+    }
+
+    &-grid-ativos {
+      padding: $medium-padding;
+    }
+
+    .main-title {
+      max-width: 30rem;
+      margin-bottom: $medium-padding;
+    }
+  }
+
+  .vantagens {
+    padding: $medium-padding;
+
+    .main-title {
+      text-align: left;
+    }
+  }
+
+  .frase {
+    padding: $medium-padding;
+    height: 35rem;
+
+    &::before {
+      display: none;
+    }
+
+    &-text {
+      p {
+        font-size: $font-medium;
+      }
+    }
+
+    &-cite {
+      font-size: $font-medium;
+    }
+  }
+
+  .conta {
+    &-item {
+      padding: $medium-padding;
+
+      figure {
+        img {
+          max-width: 25rem;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &-content {
+      padding: $medium-padding;
+    }
+
+    &-copyright {
+      padding: $small-padding;
+    }
+  }
+}

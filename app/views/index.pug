@@ -1,0 +1,31 @@
+extends _components/layout.pug
+include _components/mixins/mixins.pug
+
+//- head
+//- ===================================
+append head
+	- var urlCSS = 'css/';
+	- var page = 'home';
+
+	include _includes/head.pug
+
+//- Content
+//- ===================================
+block content
+	- var urlIndex = 'index.html';
+	- var urlImg = 'img/';
+	- var page = 'home';
+	- var urlPages = "";
+	
+		include _includes/header.pug
+		include _includes/intro.pug
+		include _includes/vantagens.pug
+		include _includes/depoimento.pug
+		include _includes/conta.pug
+		include _includes/footer.pug
+
+	//- scripts
+	//- ===================================
+	prepend scripts
+		- var urlJS = './js/'
+		include _includes/scripts.pug
