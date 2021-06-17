@@ -1,11 +1,12 @@
 .footer {
+  background-color: black;
+  
   .title {
     color: white;
     margin-bottom: $small-padding;
   }
 
   &-content {
-    background-color: black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: $medium-padding;
@@ -51,5 +52,6 @@
     color: white;
     font-size: $font-small;
     padding: $small-padding $large-padding;
+    text-align: center;
   }
 }

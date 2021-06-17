@@ -6,9 +6,10 @@ section.intro
       a(class="btn-big" href="") Investir Agora
     .intro-grid_item
       img(src=urlImg + 'notre-dame.svg', alt="Castelo com carrinho na frente")
-  
-  .intro-grid-ativos
-    +ativos('CDB 2018/12', '110% do CDB', 'Banco Certo')
-    +ativos('LCI 2020/01', '115% do CDB', 'Santrafe')
-    +ativos('LCA 2022/06', '117% do CDB', 'Banco Inova')
-    +ativos('LCI 2018/07', '122% do CDB', 'Cofre Agora')
+  .intro-wrapper
+    .container
+      .intro-grid-ativos
+        +ativos('CDB 2018/12', '110% do CDB', 'Banco Certo')
+        +ativos('LCI 2020/01', '115% do CDB', 'Santrafe')
+        +ativos('LCA 2022/06', '117% do CDB', 'Banco Inova')
+        +ativos('LCI 2018/07', '122% do CDB', 'Cofre Agora')
