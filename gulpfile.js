@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
 const babel = require('gulp-babel');
 const rollup = require('gulp-better-rollup');
